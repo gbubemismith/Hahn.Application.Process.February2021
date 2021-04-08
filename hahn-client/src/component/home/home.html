@@ -1,0 +1,68 @@
+<template>
+  <div class="row">
+    <p>Language:</p>
+    <ul style="list-style-type: none;">
+        <li repeat.for="locale of locales">
+            <input type="radio" id="locale${$index}" name="locale" value.bind="locale.key" autocomplete="off" checked.bind="currentLocale">
+            <label for="locale${$index}" textcontent.bind="locale.label"></label>
+        </li>
+    </ul>
+  </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-md-8">
+        <form role="form" submit.delegate = "createAsset()" autocomplete="off" validation-errors.bind="errors">
+  
+          <div class="form-group" validation-errors.bind="assetNameErrors" class.bind="assetNameErrors.length ? 'has-error' : ''">
+            <label for="assetInputName" t="assetForm.assetName">Asset Name</label>
+            <input type="text" class="form-control" id="assetInputName" placeholder="Enter Asset Name" value.bind="asset.assetName & validate">
+          </div>
+
+          <div class="form-group" validation-errors.bind="departmentErrors" class.bind="departmentErrors.length ? 'has-error' : ''">
+            <label for="departmentSelect" t="assetForm.department">Department</label>
+            <select class="form-control" id="departmentSelect" value.bind="asset.department & validate">
+              <option >Select a department</option>
+              <option value="HQ">HQ</option>
+              <option value="Store1">Store 1</option>
+              <option value="Store2">Store 2</option>
+              <option value="Store3">Store 3</option>
+              <option value="MaintenanceStation">Maintenance Station</option>
+            </select>
+          </div>
+
+          <div class="form-group" validation-errors.bind="countryErrors" class.bind="countryErrors.length ? 'has-error' : ''">
+            <label for="countryDepartmentSelect" t="assetForm.country">Country of Department</label>
+            <input type="text" class="form-control" id="countryDepartmentSelect" placeholder="Enter Country of Department" value.bind="asset.countryOfDepartment & validate">
+          </div>
+
+          <div class="form-group" validation-errors.bind="emailErrors" class.bind="emailErrors.length ? 'has-error' : ''">
+            <label for="InputEmail" t="assetForm.email">Email address</label>
+            <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" value.bind="asset.eMailAdressOfDepartment & validate">
+            <small id="emailHelp" class="form-text text-muted" t="assetForm.message">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="form-group" validation-errors.bind="purchaseErrors" class.bind="purchaseErrors.length ? 'has-error' : ''">
+            <label for="purchaseDate" t="assetForm.purchaseDate">Purchase date</label>
+            <input class="form-control" id="purchaseDate" type="date" value.bind="asset.purchaseDate & validate"/>
+        </div>
+          
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox"  id="defaultCheck1" checked.bind="isChecked">
+          <label class="form-check-label" for="defaultCheck1" t="assetForm.broken">
+            Broken
+          </label>
+        </div>
+
+        <div class="pt-4">
+          <button type="submit" class="btn btn-success mr-2" t="assetForm.create" disabled.bind="!canSave">Create</button>
+          <button type="button" class="btn btn-primary" t="assetForm.reset" disabled.bind="!canReset" click.trigger = "resetData()">Reset</button>
+        </div>
+    
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  
+</template>

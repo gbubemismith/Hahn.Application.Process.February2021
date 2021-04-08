@@ -1,0 +1,38 @@
+[
+    {
+        "ID": 1,
+        "AssetName": "Office Equipement",
+        "Department": 1,
+        "CountryOfDepartment": "Germany",
+        "EMailAdressOfDepartment": "testemail@gmail.com",
+        "PurchaseDate": "2021-04-03T23:48:31Z",
+        "broken": false
+    },
+    {
+        "ID": 2,
+        "AssetName": "Inventory",
+        "Department": 2,
+        "CountryOfDepartment": "England",
+        "EMailAdressOfDepartment": "testemail2@gmail.com",
+        "PurchaseDate": "2021-04-03T23:48:31Z",
+        "broken": true
+    },
+    {
+        "ID": 3,
+        "AssetName": "Real estate",
+        "Department": 3,
+        "CountryOfDepartment": "Brazil",
+        "EMailAdressOfDepartment": "testemail3@gmail.com",
+        "PurchaseDate": "2021-04-03T23:48:31Z",
+        "broken": false
+    },
+    {
+        "ID": 4,
+        "AssetName": "Machinery",
+        "Department": 3,
+        "CountryOfDepartment": "Nigeria",
+        "EMailAdressOfDepartment": "testemail4@gmail.com",
+        "PurchaseDate": "2021-04-03T23:48:31Z",
+        "broken": true
+    }
+]

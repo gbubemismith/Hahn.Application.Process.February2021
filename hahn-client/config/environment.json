@@ -1,0 +1,5 @@
+{
+  "debug": true,
+  "testing": true,
+  "apiUrl": "api/v1/"
+}

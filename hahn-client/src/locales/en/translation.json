@@ -1,0 +1,23 @@
+{
+    "assetForm":{
+       "assetName":"Asset Name",
+       "department":"Department",
+       "country":"Country of Department",
+       "email":"Email Address",
+       "purchaseDate":"Purchase Date",
+       "broken":"Broken",
+       "create":"Create",
+       "reset":"Reset",
+       "message": "We'll never share your email with anyone else",
+       "modalMessage": "Are you sure you want to reset data?",
+       "validationErrors":{
+          "nameRequiredError":"Asset name is required",
+          "nameLengthError":"Asset name must be at least 5 characters",
+          "departmentError":"Department must be selected",
+          "countryRequired":"Country of department is required",
+          "emailRequired":"Email Addres is required",
+          "emailValid":"Email Address must be valid",
+          "purchaseDate":"Purchase date must not be older than one year"
+       }
+    }
+ }

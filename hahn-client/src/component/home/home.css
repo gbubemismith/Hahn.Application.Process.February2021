@@ -1,0 +1,13 @@
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 550px;
+  margin: 0 auto 100px;
+  background: #d3d3d3;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}

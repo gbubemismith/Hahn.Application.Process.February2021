@@ -1,0 +1,36 @@
+<template>
+    <style>
+        div.div{
+            background-color:#C0C0C0;
+            padding: 15px;
+        }
+        p {
+            color: white;
+        }
+        .styleButton{
+            margin-top: 20px;
+            text-align: center;
+            min-width: 100px;
+            border-radius: 5px;
+        }
+        
+    </style>
+ 
+    <div class="div">
+
+     
+        <div>
+            <p>${message}</p>
+        </div>
+     
+        <div class="styleButton" hidden.bind="isConfirmation">
+            <button click.delegate="ok()">OK</button>
+        </div>
+
+        <div class="styleButton" hidden.bind="!isConfirmation">
+            <button click.delegate="cancel()" class="btn btn-outline-danger">No</button>
+            <button click.delegate="ok()" class="btn btn-outline-primary">Yes</button>
+        </div>
+    </div>
+</template>
+

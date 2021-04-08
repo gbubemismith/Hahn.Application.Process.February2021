@@ -1,0 +1,11 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+    hahnapplicationprocessfebruary2021web:
+        container_name: hahnapplicationprocessfebruary2021web
+        restart: on-failure
+        image: hahnapplicationprocessfebruary2021web
+        ports:
+            - '8000:80'

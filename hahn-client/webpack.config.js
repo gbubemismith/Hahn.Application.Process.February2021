@@ -62,7 +62,9 @@ module.exports = ({ production } = {}, {extractCss, analyze, tests, hmr, port, h
     chunkFilename: production ? '[name].[chunkhash].chunk.js' : '[name].[hash].chunk.js'
   },
   optimization: {
-    runtimeChunk: true,  // separates the runtime chunk, required for long term cacheability
+    runtimeChunk: true,
+    concatenateModules: false,
+      // separates the runtime chunk, required for long term cacheability
     // moduleIds is the replacement for HashedModuleIdsPlugin and NamedModulesPlugin deprecated in https://github.com/webpack/webpack/releases/tag/v4.16.0
     // changes module id's to use hashes be based on the relative path of the module, required for long term cacheability
     moduleIds: 'hashed',

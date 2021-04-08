@@ -1,0 +1,16 @@
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 550px;
+  margin: 0 auto 100px;
+  background: #d3d3d3;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+
+/*# sourceMappingURL=app~f075b844.256c100609561d40fdd5.bundle.map*/
